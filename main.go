@@ -32,10 +32,12 @@ func CssHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		http.Error(w, fmt.Sprintf("parse url error %v", err), 500)
 	}
+
 	fmt.Fprintf(w, ".......\n")
 	fmt.Fprintf(w, "request.Method  %v\n", r.Method)
 	fmt.Fprintf(w, "request.Method  %v\n", r.RequestURI)
 	fmt.Fprintf(w, "request.Cookies  %v\n", r.Cookies())
+	
 }
 
 func main() {
